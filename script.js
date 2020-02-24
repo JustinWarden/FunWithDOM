@@ -119,6 +119,52 @@ var movieSchedule = [
          document.querySelector("#movie-schedule").innerHTML += `${movieSchedule[i].currentlyPlaying}<br>`
       }
 
-      
+// exercise 8
+var cohort1 = {
+    name: "Cohort One",
+    startDate: "January 15, 2018",
+    endDate: "July 12, 2019",
+    instructors: ["Kim", "Josh", "Jordan"],
+    techStack: ["HTML", "CSS", "JavaScript", "React", "C#", ".NET"]
+  }
 
+  var cohort2 = {
+   name: "Cohort Two",
+   startDate: "August 15, 2019",
+   endDate: "Feb 10, 2020",
+   instructors: ["Kim", "Josh", "Jordan"],
+   techStack: ["HTML", "CSS", "JavaScript", "React", "C#", ".NET"]
+  }
 
+  var cohort3 = {
+   name: "Cohort Three",
+   startDate: "Feb 20, 2020",
+   endDate: "August 20, 2020",
+   instructors: ["Kim", "Josh", "Jordan"],
+   techStack: ["HTML", "CSS", "JavaScript", "React", "C#", ".NET"]
+  }
+
+  function buildHtmlString(cohortObjectParameter){
+      if(cohortObjectParameter === "cohort1"){
+    document.querySelector("#cohort-one-container").innerHTML = `<h1>${cohort1.name}</h1><br>
+    <h3>${cohort1.startDate}</h3><br>
+    <h3>${cohort1.endDate}</h3><br>
+    <li>${cohort1.instructors}<li>
+    <li>${cohort1.techStack}<li>`
+
+      } else if (cohortObjectParameter === "cohort2"){
+        document.querySelector("#cohort-two-container").innerHTML = `<h1>${cohort2.name}</h1><br>
+        <h3>${cohort2.startDate}</h3><br>
+        <h3>${cohort2.endDate}</h3><br>
+        <li>${cohort2.instructors}<li>
+        <li>${cohort2.techStack}<li>`
+
+      }else if (cohortObjectParameter === "cohort3"){
+        document.querySelector("#cohort-three-container").innerHTML = `<h1>${cohort3.name}</h1><br>
+        <h3>${cohort3.startDate}</h3><br>
+        <h3>${cohort3.endDate}</h3><br>
+        <li>${cohort3.instructors}<li>
+        <li>${cohort3.techStack}<li>`
+      }
+  }
+buildHtmlString("cohort3")
